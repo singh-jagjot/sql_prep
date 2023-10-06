@@ -1,0 +1,1 @@
+select avg(CITY.POPULATION) from CITY where CITY.DISTRICT = 'California';

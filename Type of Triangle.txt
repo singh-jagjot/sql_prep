@@ -1,0 +1,13 @@
+select 
+    case 
+        when TRIANGLES.A >= TRIANGLES.B + TRIANGLES.C 
+            or TRIANGLES.B >= TRIANGLES.A + TRIANGLES.C
+            or TRIANGLES.C >= TRIANGLES.B + TRIANGLES.A then 'Not A Triangle'
+        when TRIANGLES.A = TRIANGLES.B and TRIANGLES.B = TRIANGLES.C 
+            then 'Equilateral'
+        when TRIANGLES.A = TRIANGLES.B or TRIANGLES.B = TRIANGLES.C
+            or TRIANGLES.A = TRIANGLES.C then 'Isosceles'
+        else 'Scalene'
+    end
+from TRIANGLES;
+        

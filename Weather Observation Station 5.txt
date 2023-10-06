@@ -1,0 +1,5 @@
+/*
+Enter your query here.
+*/
+select STATION.CITY, length(STATION.CITY) from STATION order by length(STATION.CITY), STATION.CITY limit 1;
+select STATION.CITY, length(STATION.CITY) from STATION order by length(STATION.CITY) desc, STATION.CITY desc limit 1;

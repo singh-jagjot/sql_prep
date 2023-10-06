@@ -1,0 +1,1 @@
+select Employee.name from Employee where Employee.salary > 2000 and Employee.months < 10;

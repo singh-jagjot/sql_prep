@@ -1,0 +1,9 @@
+/*
+Enter your query here.
+*/
+select distinct STATION.CITY from STATION 
+where STATION.CITY like '%a' 
+or STATION.CITY like '%e'
+or STATION.CITY like '%i'
+or STATION.CITY like '%o'
+or STATION.CITY like '%u';

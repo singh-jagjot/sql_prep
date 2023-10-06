@@ -1,0 +1,4 @@
+/*
+Enter your query here.
+*/
+select count(STATION.CITY) - count(distinct STATION.CITY) from STATION;

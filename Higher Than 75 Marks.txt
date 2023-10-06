@@ -1,0 +1,4 @@
+/*
+Enter your query here.
+*/
+select STUDENTS.NAME from STUDENTS where STUDENTS.MARKS > 75 order by right(STUDENTS.NAME, 3), STUDENTS.ID;
