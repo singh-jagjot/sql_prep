@@ -1,0 +1,1 @@
+select truncate(sqrt(power(min(STATION.LAT_N) - max(STATION.LAT_N), 2) + power(min(STATION.LONG_W) - max(STATION.LONG_W), 2)), 4) from STATION;

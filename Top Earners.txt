@@ -1,0 +1,1 @@
+select Employee.months * Employee.salary as m, count(*) from Employee group by m order by m desc limit 1;

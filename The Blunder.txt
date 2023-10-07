@@ -1,0 +1,1 @@
+select ceiling(avg(EMPLOYEES.Salary) - avg(replace(EMPLOYEES.Salary, '0', ''))) from EMPLOYEES;

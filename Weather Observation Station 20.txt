@@ -1,0 +1,14 @@
+set @rows = (select count(*) from STATION);
+set @row1 = floor(@rows / 2);
+set @row2 = floor((@rows / 2) + 1);
+set @row3 = floor((@rows + 1) / 2);
+
+-- select @rows, @row1, @row2, @row3 from STATION limit 1;
+with order_station(rnum, LAT_N) as (select row_number() over(order by STATION.LAT_N) as rnum, STATION.LAT_N from STATION) 
+select
+    case
+    when @rows % 2 != 0
+    then (select round(avg(order_station.LAT_N), 4) from order_station where order_station.rnum = @row2 or order_station.rnum = @row3)
+    else (select round(order_station.LAT_N, 4) from order_station where order_station.rnum = @row1)
+    end
+;

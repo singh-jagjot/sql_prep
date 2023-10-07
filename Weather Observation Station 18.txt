@@ -1,0 +1,1 @@
+select round(abs(min(STATION.LAT_N) - max(STATION.LAT_N)) + abs(min(STATION.LONG_W) - max(STATION.LONG_W)), 4) from STATION;
