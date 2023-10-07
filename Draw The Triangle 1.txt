@@ -1,0 +1,12 @@
+delimiter //
+create procedure while_loop()
+begin
+    declare p int default 0;
+    set p = 20;
+    while p > 0 do
+        select repeat('* ', p);
+        set p = p - 1;
+    end while;
+end;//
+delimiter ;
+call while_loop();

@@ -1,0 +1,10 @@
+-- Oracle
+with Sub as (
+    select Submissions.hacker_id, Submissions.challenge_id, max(Submissions.score) as score from Submissions group by Submissions.hacker_id, Submissions.challenge_id
+) 
+select Sub.hacker_id, Hackers.name, sum(Sub.score) as total_score 
+from Sub
+join Hackers on Sub.hacker_id = Hackers.hacker_id 
+group by Sub.hacker_id, Hackers.name 
+having sum(Sub.score) > 0 
+order by total_score desc, Sub.hacker_id;
