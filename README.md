@@ -1,1 +1,1 @@
-# sql_prep
+# My Solutions To The Hackerrank SQL Problems.
